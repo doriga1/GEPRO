@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caso Bacamaso vs. B3P - VIII CBP - GEPRO UEL</title>
     
+    <link rel="apple-touch-icon" sizes="180x180" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,23 +17,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 
     <style>
-        /* FUNDO CLARO COM TEXTURA SUTIL */
         body {
-            background-color: #F8FAFC; /* Slate 50 (Cinza muito claro) */
-            /* Padrão de fundo sutil para não ficar "branco hospital" */
+            background-color: #F8FAFC; 
             background-image: radial-gradient(#CBD5E1 1px, transparent 1px);
             background-size: 24px 24px;
             font-family: 'Inter', sans-serif;
-            color: #334155; /* Slate 700 (Cinza escuro para texto) */
+            color: #334155; 
         }
 
-        /* CLASSE PARA ALINHAMENTO JUSTIFICADO INTELIGENTE */
         .text-juridico {
             text-align: justify;
-            hyphens: auto; /* Hifenização automática se o navegador suportar */
+            hyphens: auto; 
         }
 
-        /* REMOVENDO ESTILOS PADRÃO DO ACCORDION */
         summary {
             list-style: none;
         }
@@ -36,18 +37,21 @@
             display: none;
         }
 
-        /* ANIMAÇÃO DO ÍCONE */
         details[open] .toggle-icon {
             transform: rotate(90deg);
         }
         
-        /* DESTAQUE DOURADO NO TEXTO */
         .highlight-gold {
-            color: #B45309; /* Amber 700 - Um dourado escuro/bronze legível no branco */
+            color: #B45309; 
             font-weight: 600;
-            background-color: #FEF3C7; /* Fundo amarelo muito pálido para destacar */
+            background-color: #FEF3C7; 
             padding: 0 4px;
             border-radius: 4px;
+        }
+        
+        /* Classe para padronizar as imagens dos patrocinadores */
+        .sponsor-logo {
+            @apply h-16 w-auto object-contain grayscale hover:grayscale-0 transition duration-300 bg-white p-2 rounded border border-gray-200;
         }
     </style>
 
@@ -56,11 +60,11 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#0F172A',   // Azul Marinho Profundo (Cor principal do texto/títulos)
-                        'accent': '#D97706',    // Dourado/Bronze (Detalhes)
-                        'surface': '#FFFFFF',   // Branco puro para cartões
-                        'subtle': '#F1F5F9',    // Cinza claro para fundos secundários
-                        'gepro-red': '#B91C1C'  // Vermelho escuro (institucional)
+                        'primary': '#0F172A',   
+                        'accent': '#D97706',    
+                        'surface': '#FFFFFF',   
+                        'subtle': '#F1F5F9',    
+                        'gepro-red': '#B91C1C'  
                     },
                     fontFamily: {
                         'sans': ['Inter', 'sans-serif'],
@@ -92,29 +96,38 @@
                     VIII Competição Brasileira de Processo
                 </p>
 
+                <div class="inline-block bg-red-50 border border-red-100 rounded-full px-6 py-2 mb-8">
+                    <span class="text-gepro-red font-bold text-sm flex items-center gap-2">
+                        <span class="relative flex h-3 w-3">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-3 w-3 bg-gepro-red"></span>
+                        </span>
+                        Sessão de Julgamento do REsp: 22/11/2025
+                    </span>
+                </div>
+
                 <div class="w-full bg-gray-50 rounded-lg p-6 border border-gray-100">
-                    <h3 class="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Realização e Apoio</h3>
+                    <h3 class="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-6">Realização e Apoio</h3>
                     
-                    <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+                    <div class="flex flex-col gap-8">
                         
                         <div class="flex flex-col items-center">
-                            <span class="text-accent font-serif font-bold text-sm mb-2">★ DIAMANTE</span>
-                            <img src="image_0.png" 
-                                 alt="Araujo Lázaro & Barradas" 
-                                 class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-300">
+                            <span class="text-accent font-serif font-bold text-sm mb-4">★ DIAMANTE</span>
+                            <div class="flex flex-wrap justify-center gap-6 items-center">
+                                <img src="image_0.png" alt="Araujo Lázaro & Barradas" class="h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-300 bg-white p-2 rounded border border-gray-200">
+                                <img src="ALB.jpg" alt="ALB" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition duration-300 bg-white p-2 rounded border border-gray-200">
+                                <img src="maidana.jpg" alt="Maidana" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition duration-300 bg-white p-2 rounded border border-gray-200">
+                                <img src="thoth.jpg" alt="Thoth" class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition duration-300 bg-white p-2 rounded border border-gray-200">
+                            </div>
                         </div>
 
-                        <div class="hidden md:block w-px h-16 bg-gray-300"></div>
+                        <div class="w-1/2 mx-auto h-px bg-gray-200"></div>
 
                         <div class="flex flex-col items-center">
-                            <span class="text-gray-500 font-serif font-bold text-xs mb-2">PLATINA</span>
-                            <div class="flex gap-4">
-                                <div class="h-12 w-32 bg-gray-200 rounded flex items-center justify-center text-xs text-gray-400 font-mono border border-gray-300 border-dashed">
-                                    [Logo Platina 1]
-                                </div>
-                                <div class="h-12 w-32 bg-gray-200 rounded flex items-center justify-center text-xs text-gray-400 font-mono border border-gray-300 border-dashed">
-                                    [Logo Platina 2]
-                                </div>
+                            <span class="text-gray-500 font-serif font-bold text-xs mb-4">PLATINA</span>
+                             <div class="flex flex-wrap justify-center gap-6 items-center">
+                                <img src="finardi.jpg" alt="Finardi" class="h-14 w-auto object-contain grayscale hover:grayscale-0 transition duration-300 bg-white p-2 rounded border border-gray-200">
+                                <img src="trigo.jpg" alt="Trigo" class="h-14 w-auto object-contain grayscale hover:grayscale-0 transition duration-300 bg-white p-2 rounded border border-gray-200">
                             </div>
                         </div>
 
@@ -134,11 +147,11 @@
                     </div>
 
                     <p class="text-juridico text-gray-700 text-lg leading-relaxed mb-8">
-                        Estamos diante de uma batalha jurídica monumental envolvendo um contrato de <span class="highlight-gold">R$ 2 Bilhões</span>. O atraso na entrega de um parque eólico pela B3P desencadeou multas milionárias, dois procedimentos arbitrais complexos e uma intervenção do Poder Judiciário que <span class="highlight-gold">anulou a sentença arbitral</span>. O caso confronta a autonomia da vontade das partes (o que foi pactuado) contra normas de ordem pública e a jurisprudência vinculante do STJ.
+                        Estamos diante de uma batalha jurídica monumental envolvendo um contrato de <span class="highlight-gold">R$ 2 Bilhões</span>. O atraso na entrega de um parque eólico pela B3P desencadeou multas milionárias, dois procedimentos arbitrais complexos e uma intervenção do Poder Judiciário que <span class="highlight-gold">anulou a sentença arbitral</span>. O caso confronta a autonomia da vontade das partes contra normas de ordem pública e precedentes do STJ.
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#" class="text-center bg-primary text-white font-medium py-3 px-6 rounded hover:bg-slate-800 transition shadow-lg shadow-slate-300/50 flex items-center justify-center gap-2">
+                        <a href="caso.pdf" download class="text-center bg-primary text-white font-medium py-3 px-6 rounded hover:bg-slate-800 transition shadow-lg shadow-slate-300/50 flex items-center justify-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
@@ -202,22 +215,29 @@
                     <details class="group bg-subtle rounded-lg border border-gray-200 overflow-hidden">
                         <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-gray-100 transition select-none">
                             <h3 class="font-serif text-xl text-primary font-bold flex items-center gap-3">
-                                <span>⚖️ O Labirinto Processual</span>
+                                <span>⚖️ O Labirinto Processual (Med-Arb)</span>
                             </h3>
                             <span class="toggle-icon text-accent text-2xl transition-transform duration-300">›</span>
                         </summary>
                         <div class="p-6 pt-2 border-t border-gray-200 text-gray-700 leading-relaxed bg-white">
-                            <p class="text-juridico mb-4">O contrato continha <strong class="text-accent">Cláusula Escalonada (Med-Arb)</strong>, exigindo Mediação prévia.</p>
-                            <div class="space-y-3">
+                            <p class="text-juridico mb-4">O contrato continha <strong class="text-accent">Cláusula Escalonada</strong>, exigindo Mediação antes da Arbitragem.</p>
+                            
+                            <div class="space-y-3 mb-4">
                                 <div class="p-3 border-l-4 border-green-500 bg-green-50">
-                                    <strong class="block text-green-800">Arbitragem 00/16 (Repactuação)</strong>
+                                    <strong class="block text-green-800">P.A. 00/16 (Repactuação)</strong>
                                     <span class="text-sm text-green-700">Seguiu o rito: Mediação Frustrada → Arbitragem.</span>
                                 </div>
                                 <div class="p-3 border-l-4 border-red-500 bg-red-50">
-                                    <strong class="block text-red-800">Arbitragem 00/17 (Multa)</strong>
-                                    <span class="text-sm text-red-700 text-juridico">A B3P obteve liminar judicial e iniciou arbitragem <strong>SEM mediação prévia</strong>. A Sentença Arbitral (agora anulada) havia validado essa conduta.</span>
+                                    <strong class="block text-red-800">P.A. 00/17 (Multa e Lucros Cessantes)</strong>
+                                    <span class="text-sm text-red-700 text-juridico">Instaurado pela B3P após obter tutela judicial para suspender a multa. <strong class="uppercase">Não houve mediação prévia</strong>.</span>
                                 </div>
                             </div>
+
+                            <div class="p-4 bg-blue-50 rounded border border-blue-100 text-sm text-blue-800 italic mb-4">
+                                ℹ️ <strong>Nota Importante:</strong> Durante o trâmite, houve uma <em>mediação ad hoc</em> que suspendeu as arbitragens. As partes tentaram um acordo parcial após a entrega dos projetos, mas sem sucesso, retomando o litígio.
+                            </div>
+                            
+                            <p class="text-juridico text-sm">A <strong>Sentença Arbitral (Anulada)</strong> unificou os casos, validou a multa, aplicou INCC + 1% a.m. e condenou a B3P em honorários.</p>
                         </div>
                     </details>
 
@@ -229,16 +249,19 @@
                             <span class="toggle-icon text-accent text-2xl transition-transform duration-300">›</span>
                         </summary>
                         <div class="p-6 pt-2 border-t border-gray-200 text-gray-700 leading-relaxed bg-white">
-                            <p class="text-juridico mb-4">O Tribunal de Justiça reformou a sentença de 1º grau (que extinguia por decadência) e <strong>ANULOU A SENTENÇA ARBITRAL</strong> sob três fundamentos:</p>
+                            <p class="text-juridico mb-4">O TJ reformou a decisão de 1º grau (que extinguia por decadência) e <strong>ANULOU A SENTENÇA ARBITRAL</strong> sob quatro fundamentos:</p>
                             <ol class="list-decimal list-inside space-y-3 text-juridico">
-                                <li class="pl-2 marker:font-bold marker:text-gepro-red">
-                                    <strong>Vício de Procedimento:</strong> A falta de mediação prévia na Arb. 00/17 viciou a vontade e a jurisdição dos árbitros.
+                                <li class="pl-2">
+                                    <strong>Tempestividade:</strong> O prazo de 90 dias conta da decisão dos esclarecimentos, mesmo se inadmitidos.
                                 </li>
                                 <li class="pl-2 marker:font-bold marker:text-gepro-red">
-                                    <strong>Ordem Pública (Juros):</strong> O árbitro não poderia afastar a taxa SELIC (Precedente do STJ) para aplicar juros contratuais compostos.
+                                    <strong>Vício de Procedimento:</strong> A ausência de mediação prévia no PA 00/17 violou a cláusula contratual.
                                 </li>
                                 <li class="pl-2 marker:font-bold marker:text-gepro-red">
-                                    <strong>Honorários:</strong> A fixação milionária violaria o Tema 1.255 do STF (equidade em causas de valor inestimável).
+                                    <strong>Falta de Jurisdição:</strong> Os procedimentos <strong class="text-gepro-red">não foram formalmente reunidos</strong>, logo os árbitros não tinham competência para decidir o PA 00/17.
+                                </li>
+                                <li class="pl-2">
+                                    <strong>Ordem Pública:</strong> Violação à taxa SELIC (STJ) e ao Tema 1.255 do STF (Honorários).
                                 </li>
                             </ol>
                         </div>
@@ -251,7 +274,7 @@
                         <h2 class="font-serif text-3xl text-primary mb-2">Teses do Recurso Especial</h2>
                         <div class="h-1 w-20 bg-accent mx-auto rounded"></div>
                         <p class="text-gray-500 mt-4 max-w-2xl mx-auto">
-                            O caso sobe ao STJ. Como advogados da Bacamaso, enfrentaremos os seguintes debates jurídicos:
+                            O caso está pautado no STJ. Como advogados da Bacamaso, enfrentaremos os seguintes debates:
                         </p>
                     </div>
 
@@ -260,28 +283,28 @@
                         <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-t-4 border-primary">
                             <h4 class="font-serif text-lg font-bold text-primary mb-3">Decadência vs. Tempestividade</h4>
                             <p class="text-juridico text-sm text-gray-600">
-                                Um <span class="bg-yellow-100 text-yellow-800 font-semibold px-1">Pedido de Esclarecimentos inadmitido</span> (por não apontar obscuridade real) interrompe o prazo fatal de 90 dias para a Ação Anulatória? Ou a B3P perdeu o prazo?
+                                Um <span class="bg-yellow-100 text-yellow-800 font-semibold px-1">Pedido de Esclarecimentos inadmitido</span> interrompe o prazo fatal de 90 dias para a Ação Anulatória? Ou a B3P perdeu o prazo?
                             </p>
                         </div>
 
                         <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-t-4 border-primary">
                             <h4 class="font-serif text-lg font-bold text-primary mb-3">Venire Contra Factum Proprium</h4>
                             <p class="text-juridico text-sm text-gray-600">
-                                A B3P pulou a mediação para agilizar a arbitragem. Perdeu no mérito e agora pede nulidade pela falta da mediação que ela mesma ignorou. Isso é <span class="bg-yellow-100 text-yellow-800 font-semibold px-1">má-fé processual</span>?
+                                A B3P pulou a mediação e agora usa isso para anular a sentença. Isso configura <span class="bg-yellow-100 text-yellow-800 font-semibold px-1">má-fé processual</span>?
                             </p>
                         </div>
 
                         <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-t-4 border-primary">
                             <h4 class="font-serif text-lg font-bold text-primary mb-3">Arbitragem vs. SELIC</h4>
                             <p class="text-juridico text-sm text-gray-600">
-                                Em litígio patrimonial disponível, o Árbitro deve obediência cega ao STJ (Taxa SELIC) ou prevalece o <span class="bg-yellow-100 text-yellow-800 font-semibold px-1">Pacta Sunt Servanda</span> (INCC + 1%) escolhido por empresas sofisticadas?
+                                Em litígio patrimonial disponível, o Árbitro deve obediência cega ao STJ (Taxa SELIC) ou prevalece o <span class="bg-yellow-100 text-yellow-800 font-semibold px-1">Pacta Sunt Servanda</span> (INCC + 1%)?
                             </p>
                         </div>
 
                         <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border-t-4 border-primary">
-                            <h4 class="font-serif text-lg font-bold text-primary mb-3">Formalismo vs. Eficiência</h4>
+                            <h4 class="font-serif text-lg font-bold text-primary mb-3">Jurisdição e Conexão</h4>
                             <p class="text-juridico text-sm text-gray-600">
-                                Faz sentido anular tudo por falta de mediação quando as partes já haviam falhado na mediação de um caso conexo? O ritualismo deve superar a efetividade da jurisdição arbitral?
+                                A falta de <span class="bg-yellow-100 text-yellow-800 font-semibold px-1">reunião formal</span> dos processos retira a jurisdição dos árbitros, mesmo havendo conexão fática evidente e julgamento conjunto?
                             </p>
                         </div>
 
